@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="445.0" prefHeight="445.0" prefWidth="743.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="soft2412.currencyconverter.ConverterController">
+   <children>
+      <BorderPane prefHeight="445.0" prefWidth="743.0">
+         <left>
+            <VBox prefHeight="445.0" prefWidth="121.0" style="-fx-background-color: #546878;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="10.0" layoutY="90.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="121.0" text="Converter">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/convert.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="1.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onMenuSelection" prefHeight="37.0" prefWidth="121.0" text="Popular">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/coin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="16.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin></Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onMenuSelection" prefHeight="37.0" prefWidth="121.0" text="Add Rates">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/save-money.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="6.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="47.0" mnemonicParsing="false" onAction="#onMenuSelection" prefHeight="37.0" prefWidth="121.0" text="Summary">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/profit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="1.0" />
+                     </VBox.margin>
+                  </Button>
+               </children></VBox>
+         </left>
+         <top>
+            <HBox prefHeight="38.0" prefWidth="743.0" style="-fx-background-color: #546878;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Currency Converter" textAlignment="CENTER" wrappingWidth="743.13671875">
+                     <font>
+                        <Font name="Old English Text MT" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </Text>
+               </children></HBox>
+         </top>
+         <center>
+            <VBox prefHeight="407.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="126.0" prefWidth="623.0" />
+                  <HBox layoutX="10.0" layoutY="152.0" prefHeight="23.0" prefWidth="623.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="From:">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="130.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="173.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="623.0">
+                     <children>
+                        <ChoiceBox fx:id="inputCurrency1" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets left="130.0" top="5.0" />
+                           </HBox.margin></ChoiceBox>
+                        <Button fx:id="switchButton" mnemonicParsing="false" onAction="#swapCurrencies">
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/swap.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ChoiceBox fx:id="inputCurrency2" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin></ChoiceBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="623.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="120.0" top="7.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="inputAmount" maxWidth="150.0" onAction="#onCurrencyConversion" promptText="0.00">
+                           <font>
+                              <Font name="Californian FB Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="46.0" prefWidth="623.0">
+                     <children>
+                        <Button fx:id="inputButton" mnemonicParsing="false" onAction="#onCurrencyConversion" text="Convert">
+                           <font>
+                              <Font name="Californian FB" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="130.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="outputResult" prefHeight="56.0" prefWidth="369.0">
+                     <font>
+                        <Font name="Californian FB Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="130.0" />
+                     </VBox.margin>
+                  </Label>
+               </children></VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

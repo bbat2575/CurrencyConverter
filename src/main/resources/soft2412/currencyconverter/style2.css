@@ -1,0 +1,9 @@
+.label {
+    -fx-border-color: grey;
+    -fx-border-width: 0.5;
+}
+
+.grid-pane {
+    -fx-border-color: none;
+    -fx-border-width: none;
+}

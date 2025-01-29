@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="445.0" prefHeight="445.0" prefWidth="743.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="soft2412.currencyconverter.PopularController">
+   <children>
+      <BorderPane prefHeight="445.0" prefWidth="743.0">
+         <left>
+            <VBox prefHeight="445.0" prefWidth="121.0" style="-fx-background-color: #546878;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#onMenuSelection" prefHeight="37.0" prefWidth="121.0" text="Converter">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/convert.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="1.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="121.0" text="Popular">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/coin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="16.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin></Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onMenuSelection" prefHeight="37.0" prefWidth="121.0" text="Add Rates">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/save-money.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="6.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="47.0" mnemonicParsing="false" onAction="#onMenuSelection" prefHeight="37.0" prefWidth="121.0" text="Summary">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/profit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="1.0" />
+                     </VBox.margin>
+                  </Button>
+               </children></VBox>
+         </left>
+         <top>
+            <HBox prefHeight="38.0" prefWidth="743.0" style="-fx-background-color: #546878;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Popular Currencies" textAlignment="CENTER" wrappingWidth="743.13671875">
+                     <font>
+                        <Font name="Old English Text MT" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </Text>
+               </children></HBox>
+         </top>
+         <center>
+            <VBox prefHeight="407.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="12.0" prefWidth="623.0" />
+                  <HBox prefHeight="32.0" prefWidth="623.0">
+                     <children>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/user.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="230.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/padlock.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="77.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="2.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="36.0" prefWidth="623.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Set Popular Currencies:">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="username" maxWidth="150.0" onAction="#setPopularCurrencies" promptText="Username">
+                           <font>
+                              <Font name="Californian FB Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ImageView fx:id="usernameVerified" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="3.0" top="4.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <PasswordField fx:id="password" onAction="#setPopularCurrencies" prefHeight="29.0" prefWidth="146.0" promptText="********">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </PasswordField>
+                        <ImageView fx:id="passwordVerified" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="3.0" top="4.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="623.0">
+                     <children>
+                        <ChoiceBox fx:id="inputCurrency1" prefHeight="30.0" prefWidth="143.0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="inputCurrency2" prefHeight="30.0" prefWidth="143.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="inputCurrency3" prefHeight="30.0" prefWidth="143.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="inputCurrency4" prefHeight="30.0" prefWidth="143.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="39.0" prefWidth="623.0">
+                     <children>
+                        <Label fx:id="outputResult" prefHeight="25.0" prefWidth="369.0">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button fx:id="inputButton" mnemonicParsing="false" onAction="#setPopularCurrencies" text="Set">
+                           <font>
+                              <Font name="Californian FB" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="175.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <GridPane fx:id="popularGrid" prefHeight="236.0" prefWidth="571.0" stylesheets="@style.css">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" text="From/To">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrencyR1" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrencyR2" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrencyC1" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrencyC2" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrencyC3" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrencyC4" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency2t1" alignment="CENTER" prefHeight="47.0" prefWidth="131.0" stylesheets="@style2.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency3t1" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency4t1" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency1t2" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrencyR3" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrencyR4" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="4">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency1t3" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" text="-" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency3t2" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency4t2" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency2t3" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency4t3" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency1t4" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency2t4" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gridCurrency3t4" alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="128.0" stylesheets="@style2.css" text="-" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="gridArrow2t1" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow3t1" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow4t1" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow1t2" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow3t2" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow4t2" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow1t3" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow2t3" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow4t3" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow1t4" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow2t4" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="gridArrow3t4" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="82.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="26.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children></VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

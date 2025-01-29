@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="445.0" prefHeight="445.0" prefWidth="743.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="soft2412.currencyconverter.SummaryController">
+   <children>
+      <BorderPane prefHeight="445.0" prefWidth="743.0">
+         <left>
+            <VBox prefHeight="445.0" prefWidth="121.0" style="-fx-background-color: #546878;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#onMenuSelection" prefHeight="37.0" prefWidth="121.0" text="Converter">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/convert.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="1.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onMenuSelection" prefHeight="37.0" prefWidth="121.0" text="Popular">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/coin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="16.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin></Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onMenuSelection" prefHeight="37.0" prefWidth="121.0" text="Add Rates">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/save-money.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="6.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="47.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="121.0" text="Summary">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@icons/profit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="1.0" />
+                     </VBox.margin>
+                  </Button>
+               </children></VBox>
+         </left>
+         <top>
+            <HBox prefHeight="38.0" prefWidth="743.0" style="-fx-background-color: #546878;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Summary" textAlignment="CENTER" wrappingWidth="743.13671875">
+                     <font>
+                        <Font name="Old English Text MT" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </Text>
+               </children></HBox>
+         </top>
+         <center>
+            <VBox prefHeight="407.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="623.0" />
+                  <HBox layoutX="10.0" layoutY="152.0" prefHeight="23.0" prefWidth="623.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="From:">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="170.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="623.0">
+                     <children>
+                        <ChoiceBox fx:id="inputCurrency1" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets left="100.0" top="5.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <Button fx:id="switchButton" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ChoiceBox fx:id="inputCurrency2" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="623.0">
+                     <children>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/calendar.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="From Date:">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/calendar.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="105.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="To Date:">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="2.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="623.0">
+                     <children>
+                        <TextField fx:id="fromDate" maxWidth="150.0" onAction="#onLoadSummary" promptText="dd/mm/yyyy">
+                           <font>
+                              <Font name="Californian FB Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/arrow-right.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="17.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="toDate" maxWidth="150.0" onAction="#onLoadSummary" promptText="dd/mm/yyyy">
+                           <font>
+                              <Font name="Californian FB Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="17.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="inputButton" mnemonicParsing="false" onAction="#onLoadSummary" text="Load">
+                           <font>
+                              <Font name="Californian FB" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <GridPane prefHeight="235.0" prefWidth="623.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="202.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="204.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="196.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="91.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="159.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="allRatesField" alignment="TOP_LEFT" prefHeight="221.0" prefWidth="208.0" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="4">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="All Exchange Rates:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Average:" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Median:" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Standard Deviation:" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="medianField" alignment="TOP_LEFT" prefHeight="221.0" prefWidth="208.0" text="0.00" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sdField" alignment="TOP_LEFT" prefHeight="221.0" prefWidth="208.0" text="0.00" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="maxField" alignment="TOP_LEFT" prefHeight="221.0" prefWidth="208.0" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="minField" alignment="TOP_LEFT" prefHeight="221.0" prefWidth="208.0" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="averageField" alignment="TOP_LEFT" prefHeight="221.0" prefWidth="200.0" text="0.00" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Californian FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="outputResult" alignment="TOP_CENTER" prefHeight="52.0" prefWidth="535.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Californian FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children></VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

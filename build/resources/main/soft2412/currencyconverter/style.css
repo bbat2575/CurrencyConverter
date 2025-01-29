@@ -1,0 +1,20 @@
+.anchor {
+    -fx-background-image: url('images/background3.png');
+    -fx-background-size: 100% 100%;
+}
+
+.button {
+    -fx-background-color: #a6b06f;
+}
+
+.button:hover {
+    -fx-background-color: #b3bf73;
+}
+
+#switchButton {
+    -fx-background-color: none;
+}
+
+.choice-box {
+    -fx-font-size: 14px;
+}
