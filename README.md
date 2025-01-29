@@ -28,7 +28,7 @@ Password: admin
 
 ## Tech Stack
 - JDK 17
-- JavaFX 17.0.12
+- JavaFX 17
 - Gradle 8.5
 - JUnit 5
 - JaCoCo
