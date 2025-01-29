@@ -14,19 +14,26 @@
 gradle clean build run
 ```
 
-## How to test the program:
+## How To Test:
 
 ```bash
 gradle test jacocoTestReport
 ```
 
-## Admin user
+## Admin Privileges
 Should you wish to use the application as the admin user (maintain/update exchange rates and control the most popular currencies):  
 <br>
 Username: admin  
 Password: admin
 
-## Screenshots
+## Tech Stack
+- JDK 17
+- JavaFX 17.0.12
+- Gradle 8.5
+- JUnit 5
+- JaCoCo
+
+## Preview
 
 <p align="center">
     <img src="https://github.com/bbat2575/CurrencyConverter/blob/main/images/ConverterPic1.png"/>
