@@ -28,8 +28,6 @@ Admin password: admin
 
 ## Screenshots
 
-![alt text](https://github.com/bbat2575/CurrencyConverter/blob/main/images/ConverterPic1.png)
-
 <p align="center">
     <img src="https://github.com/bbat2575/CurrencyConverter/blob/main/images/ConverterPic1.png"/>
 </p>
