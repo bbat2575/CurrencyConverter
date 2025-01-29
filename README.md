@@ -2,7 +2,7 @@
 
 **A versatile currency converter program.**
 
-* Convert exchange rates
+* Convert between currencies
 * Add new currency exchange rates
 * Update existing currency exchange rates
 * Compare trends and rates for popular currencies
